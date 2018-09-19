@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/kigster/host_status.svg?branch=master)](https://travis-ci.org/kigster/host_status)
 
+> **Compatible with Ruby 2.3 and later**.
+
 # HostStatus — Work In Progress...
 
 This gem provides a consistent interface for a concept of a host or a container running a particular application. It expresses application throughput, error rate, response time, and host cpu/ram/disk metrics in a consistent way, while allowing various pluggable adapters to aquire the data.
