@@ -32,14 +32,36 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-    HostStatus.configure do |c|
-      c.adapters << :newrelic
-    end
+require 'host_status/new_relic'
+HostStatus::NewRelic.configure do |c|
+  c.api_key = '092358902850934580'
+end
+
+require 'host_status'
+HostStatus.configure do |c|
+  c.adapters << %i(newrelic ssh)
+end
     
-    HostStatus::NewRelic.configure do |c|
-      c.api_key = '092358902850934580'
-    end
-        
+@host = HostStatus::Host.new(name: 'web001.production.site.com', newrelic: { host_id: 1235, app_id: 3234 })
+
+# From the NewRelic Plugin:
+
+# per minute metrics
+@host.requests_per_minute 
+# => 35001
+@host.errors_per_minute
+# => 43.4
+@host.latency_p50 # seconds
+# => 0.234 
+
+# From the SSH plugin:
+
+@host.pct_cpu_free
+# => 23.4
+@host.pct_ram_free
+# => 21.3
+
+
 ```   
 
 ## Development

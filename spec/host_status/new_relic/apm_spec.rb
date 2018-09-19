@@ -25,11 +25,6 @@ module HostStatus
 
       let(:params) { main_params.merge(extra_params) }
 
-      it 'should have params' do
-        puts "PARAMS ARE"
-        ap params
-      end
-
       its(:name) { should eq app_name }
       its(:errors) { should eq errors }
       its(:throughput) { should eq throughput }
