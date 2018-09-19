@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Konstantin Gredeskoul']
   spec.email         = %w(kigster@gmail.com)
 
-  spec.summary       = %q{A generic interface for obtaining a status of an application running on a given host, intended to be used in Canary Deploys. Supports any number of backend adapters such as NewRelic.}
-  spec.description   = %q{A generic interface for obtaining a status of an application running on a given host, intended to be used in Canary Deploys. Supports any number of backend adapters such as NewRelic.}
+  spec.summary       = %q{A generalized interface for obtaining a status of an application running on a given host, intended to be used in Canary Deploys. Supports any number of backend adapters such as NewRelic.}
+  spec.description   = %q{A generalized facade that aggregates metrics for a given host running a particular application using any number of adapters and plugins including third-party APIs.}
   spec.homepage      = 'https://github.com/kigster/host_status'
   spec.license       = 'MIT'
 
