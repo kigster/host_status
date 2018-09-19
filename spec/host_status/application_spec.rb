@@ -30,7 +30,7 @@ module HostStatus
       describe 'out of bounds' do
         let(:throughput) { -1 }
         it 'should raise error' do
-          expect { subject }.to raise_error
+          expect { subject }.to raise_error Dry::Struct::Error
         end
       end
     end

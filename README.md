@@ -34,9 +34,14 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-require 'host_status/new_relic'
-HostStatus::NewRelic.configure do |c|
+require 'host_status/data_sources/new_relic'
+HostStatus::DataSources::NewRelic.configure do |c|
   c.api_key = '092358902850934580'
+end
+
+require 'host_status/data_sources/ssh'
+HostStatus::DataSources::NewRelic.configure do |c|
+  c.private_key = Dir.home + '~/.ssh/id_rsa'
 end
 
 require 'host_status'
@@ -44,14 +49,18 @@ HostStatus.configure do |c|
   c.adapters << %i(newrelic ssh)
 end
     
-@host = HostStatus::Host.new(name: 'web001.production.site.com', newrelic: { host_id: 1235, app_id: 3234 })
+@host = HostStatus::Host.new(name: 'web001.production.site.com')
+@host.add_source :newrelic, host_id: 1235, app_id: 3234
+@host.load! :newrelic
+@host.load! :ssh
+@host.load! # does both, since those are the adapters defined in HostStatus
 
 # From the NewRelic Plugin:
 
 # per minute metrics
-@host.requests_per_minute 
+@host.throughput 
 # => 35001
-@host.errors_per_minute
+@host.errors
 # => 43.4
 @host.latency_p50 # seconds
 # => 0.234 

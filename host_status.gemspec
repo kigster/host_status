@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'activesupport', '> 3'
 
   spec.add_dependency 'hashie'
+  spec.add_dependency 'httparty'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake'
