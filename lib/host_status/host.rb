@@ -8,7 +8,7 @@ module HostStatus
   # {
   #   "id":                  90952626,
   #   "application_name":    "G3 Homebase Production",
-  #   "host":                "crn001-a.prod.homebase.systems",
+  #   "host":                "crn001-a.prod.example.com",
   #   "language":            "ruby",
   #   "health_status":       "green",
   #   "application_summary": {

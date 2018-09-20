@@ -3,7 +3,7 @@
     {
       "id": 90952626,
       "application_name": "G3 Homebase Production",
-      "host": "crn001-a.prod.homebase.systems",
+      "host": "crn001-a.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -23,7 +23,7 @@
     {
       "id": 91785932,
       "application_name": "G3 Homebase Production",
-      "host": "job001-a.prod.homebase.systems",
+      "host": "job001-a.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -43,7 +43,7 @@
     {
       "id": 91779104,
       "application_name": "G3 Homebase Production",
-      "host": "job001-b.prod.homebase.systems",
+      "host": "job001-b.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -63,7 +63,7 @@
     {
       "id": 91785936,
       "application_name": "G3 Homebase Production",
-      "host": "job001-c.prod.homebase.systems",
+      "host": "job001-c.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -83,7 +83,7 @@
     {
       "id": 91821544,
       "application_name": "G3 Homebase Production",
-      "host": "web001-a.prod.homebase.systems",
+      "host": "web001-a.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -104,7 +104,7 @@
     {
       "id": 91802692,
       "application_name": "G3 Homebase Production",
-      "host": "web001-b.prod.homebase.systems",
+      "host": "web001-b.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -125,7 +125,7 @@
     {
       "id": 91788779,
       "application_name": "G3 Homebase Production",
-      "host": "web001-c.prod.homebase.systems",
+      "host": "web001-c.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -146,7 +146,7 @@
     {
       "id": 91789745,
       "application_name": "G3 Homebase Production",
-      "host": "web002-a.prod.homebase.systems",
+      "host": "web002-a.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -167,7 +167,7 @@
     {
       "id": 91802748,
       "application_name": "G3 Homebase Production",
-      "host": "web002-b.prod.homebase.systems",
+      "host": "web002-b.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -188,7 +188,7 @@
     {
       "id": 91802771,
       "application_name": "G3 Homebase Production",
-      "host": "web002-c.prod.homebase.systems",
+      "host": "web002-c.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -209,7 +209,7 @@
     {
       "id": 91788176,
       "application_name": "G3 Homebase Production",
-      "host": "web003-a.prod.homebase.systems",
+      "host": "web003-a.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -230,7 +230,7 @@
     {
       "id": 91795007,
       "application_name": "G3 Homebase Production",
-      "host": "web003-b.prod.homebase.systems",
+      "host": "web003-b.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {
@@ -251,7 +251,7 @@
     {
       "id": 91787562,
       "application_name": "G3 Homebase Production",
-      "host": "web003-c.prod.homebase.systems",
+      "host": "web003-c.prod.example.com",
       "language": "ruby",
       "health_status": "green",
       "application_summary": {

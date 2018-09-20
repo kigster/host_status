@@ -1,6 +1,7 @@
 require 'spec_helper'
 require 'host_status/data_sources/new_relic/apm'
 require 'awesome_print'
+
 module HostStatus
   module DataSources
     module NewRelic
