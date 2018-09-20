@@ -22,17 +22,12 @@ module HostStatus
 
         base_uri 'https://api.newrelic.com/v2/'
 
-        attr_writer :api_key
-        attr_accessor :app_id
+        attr_accessor :app_id, :api_key
 
         def initialize(api_key: nil, app_id: nil)
-          self.api_key = api_key
+          self.api_key = api_key || HostStatus::DataSources::NewRelic.config.api_key
           self.app_id  = app_id
           self.class.headers 'X-Api-Key' => api_key
-        end
-
-        def api_key
-          @api_key ||= HostStatus::DataSources::NewRelic.config.api_key
         end
 
         def application(app_id = nil)
