@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/kigster/host_status.svg?branch=master)](https://travis-ci.org/kigster/host_status)
 
-> **Compatible with Ruby 2.3 and later**.
+> **Compatible with Ruby 2.4 and later only**.
 
 # HostStatus — Work In Progress...
 
