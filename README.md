@@ -33,31 +33,37 @@ Or install it yourself as:
 
 ## Usage
 
+### Configuration
+
 ```ruby
-require 'host_status/data_sources/new_relic'
-HostStatus::DataSources::NewRelic.configure do |c|
-  c.api_key = '092358902850934580'
-end
-
-require 'host_status/data_sources/ssh'
-HostStatus::DataSources::NewRelic.configure do |c|
-  c.private_key = Dir.home + '~/.ssh/id_rsa'
-end
-
 require 'host_status'
+require 'host_status/data_sources/new_relic'
+require 'host_status/data_sources/data_dog'
+require 'host_status/data_sources/ssh'
+
 HostStatus.configure do |c|
-  c.adapters << %i(newrelic ssh)
+  c.data_source(:newrelic) do |s|
+    s.api_key = '098902384092384023984'
+    s.app_id = 90980349850 
+  end
+  
+  # Primary Data Source means any identical values collected by other datasources
+  # are ignored. Their values can still be obtained via @host.data_sources.metric_name 
+  c.data_source(:datadog, primary: true) do |s|
+    s.api_key = '098902384092384023984'
+    s.host = 'web001.prod.example.com'
+  end
+ 
+  c.data_source(:ssh) do |s|
+    s.private_key = Dir.home + '/.ssh/id_rsa'
+    s.public_key = Dir.home + '/.ssh/id_rsa.pub'
+  end 
 end
     
-@host = HostStatus::Host.new(name: 'web001.production.site.com')
-@host.add_source :newrelic, host_id: 1235, app_id: 3234
-@host.load! :newrelic
-@host.load! :ssh
-@host.load! # does both, since those are the adapters defined in HostStatus
+@host = HostStatus.host(name: 'web001.production.site.com')
+@host.collect # [Hash<Key[String], Value[Object]]
 
-# From the NewRelic Plugin:
-
-# per minute metrics
+# per minute metrics obtained from NewReli
 @host.throughput 
 # => 35001
 @host.errors
@@ -66,12 +72,10 @@ end
 # => 0.234 
 
 # From the SSH plugin:
-
 @host.pct_cpu_free
 # => 23.4
 @host.pct_ram_free
 # => 21.3
-
 
 ```   
 
